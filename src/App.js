@@ -1,25 +1,56 @@
-import logo from './logo.svg';
-import './App.css';
+// import logo from "./logo.svg"
+import ProposalCard from "./components/ProposalCard"
+import Nav from "./components/Nav"
+import Dashboard from "./components/Dashboard"
+import "./App.css"
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    return (
+        <div className="landingContainer">
+            <div className="nav">
+                <Nav />
+            </div>
+            <div className="dashboard"><Dashboard proposalNumber={ 4} expiresIn={"3 days"} /></div>
+            <div className="heading">All Proposals</div>
+            <div className="proposalCard">
+                <ProposalCard
+                    headingForProposal={"Infrastructure Costs of Subscan "}
+                    description={
+                        "This proposal is used to pay the infrastructure costs of Moonbeam ..."
+                    }
+                    upvote={12}
+                    downvote={7}
+                />
+
+                <ProposalCard
+                    headingForProposal={"Infrastructure Costs of Subscan "}
+                    description={
+                        "This proposal is used to pay the infrastructure costs of Moonbeam ..."
+                    }
+                    upvote={12}
+                    downvote={7}
+                />
+
+                <ProposalCard
+                    headingForProposal={"Infrastructure Costs of Subscan "}
+                    description={
+                        "This proposal is used to pay the infrastructure costs of Moonbeam ..."
+                    }
+                    upvote={12}
+                    downvote={7}
+                />
+
+                <ProposalCard
+                    headingForProposal={"Infrastructure Costs of Subscan "}
+                    description={
+                        "This proposal is used to pay the infrastructure costs of Moonbeam ..."
+                    }
+                    upvote={12}
+                    downvote={7}
+                />
+            </div>
+        </div>
+    )
 }
 
-export default App;
+export default App
